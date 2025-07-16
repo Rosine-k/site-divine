@@ -3,6 +3,10 @@ import Banner from "../../components/Banner/banner";
 import bannerHome from "../../assets/banner.jpg";
 import NavigationCards from "../../components/Navigation/navigation";
 import Privatisation from "../../components/Privatisation/privatisation";
+import Galerie from "../../components/Galerie/galerie";
+import FaqCarousel from "../../components/Faq/faq";
+import Contact from "../../components/Contact/contact";
+import Footer from "../../layout/Footer/footer";
 
 function Accueil() {
 
@@ -31,12 +35,12 @@ function Accueil() {
                 </div>
                 <NavigationCards />
                 <Privatisation />
-               
-
-
-                
+                <Galerie />
+                <FaqCarousel />
+                <Contact />
 
             </main>
+            <Footer />
 
         </div>
     )
