@@ -41,7 +41,7 @@
   }
 
   .menu-formule {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 
     h3 {
       font-size: 24px;
@@ -81,9 +81,10 @@
 
   .menu-cta {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
 
     .cta-button {
+      margin-top: 20px;
       background: white;
       color: #844800;
       border: 1px solid #844800;
@@ -91,7 +92,7 @@
       font-size: 16px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: 0.3s ease;      
 
       &:hover {
         background: #844800;
@@ -99,4 +100,16 @@
       }
     }
   }
+}
+
+.menu-description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; 
+  margin-bottom: 17px;
+}
+
+.menu-description p {
+  margin: 0;
+  line-height: 1.4;
 }

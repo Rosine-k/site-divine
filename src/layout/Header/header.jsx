@@ -1,4 +1,5 @@
 import LogoT from '../../assets/texte_logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
           </div>
 
           <div className="header-right">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="icon-link">
+            <a href="https://www.instagram.com/divine.restaurantparis/?hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="icon-link">
               <svg className="icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zM12 7c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm0 2c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3zm4.5-.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
               </svg>
@@ -30,13 +31,17 @@ export default function Header() {
       <div className="bottom-row-wrapper">
         <div className="header-container bottom-row">
           <div className="logo-group">
-            <img src="/logo1p.png" alt="Logo 1" className="logo" />
-            <img src={LogoT} alt="Logo 2" className="logoT" />
+            <Link to="/">
+              <img src="/logo1p.png" alt="Logo 1" className="logo" />
+            </Link>
+            <Link to="/">
+              <img src={LogoT} alt="Logo 2" className="logoT" />
+            </Link>
 
           </div>
 
           <div className="button-group">
-            <button className="header-button b1">MENU</button>
+            <Link to="/menu" className="header-button b1">MENU</Link>
             <button className="header-button b2">Réservation</button>
           </div>
         </div>
