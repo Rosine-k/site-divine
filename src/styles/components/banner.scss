@@ -7,12 +7,13 @@
 }
 
 
-
 .banner__img {
   width: 100vw;
   height: 620px;
   display: block;
   object-fit: cover;
+  z-index: 1;
+  position: relative;
 }
 
 .banner-title {
@@ -25,9 +26,43 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     font-family: 'Times New Roman', Times, serif;
-    background: rgba(0, 0, 0, 0.3); // optionnel pour lisibilité
+    background: rgba(0, 0, 0, 0.3); 
     padding: 16px 32px;
     border: 1px solid white;
+    z-index: 2;
   }
+
+// media queries
+@media (max-width: 1024px) {
+  .banner__img {
+    height: 420px;
+  }
+
+  .banner-title {
+    font-size: 40px;
+    padding: 12px 24px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner__img {
+    height: 260px;
+  }
+
+  .banner-title {
+    font-size: 20px;
+    padding: 8px 12px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.2;
+    top: 65%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 
 

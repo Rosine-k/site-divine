@@ -4,48 +4,62 @@ import Banner from "../../components/Banner/banner";
 import bannerResa from "../../assets/reservation.jpg";
 import Galerie from "../../components/Galerie/galerie";
 import Footer from "../../layout/Footer/footer";
+import Resa1 from "../../assets/reservation/resto1.jpg";
+import Resa2 from "../../assets/reservation/resto2.jpg";
+import Resa3 from "../../assets/reservation/resto3.jpg";
+import Resa4 from "../../assets/reservation/resto4.jpg";
+import Resa5 from "../../assets/reservation/resto5.jpg";
+import Resa6 from "../../assets/reservation/resto6.jpg";
+import Resa7 from "../../assets/reservation/resto7.jpg";
+import Resa8 from "../../assets/reservation/resto8.jpg";
+import Resa9 from "../../assets/reservation/resto9.jpg";
+
+const resaImages = [
+  Resa1, Resa2, Resa3, Resa4, Resa5,
+  Resa6, Resa7, Resa8, Resa9
+];
 
 function Reservation() {
-  const [formData, setFormData] = useState({
-    nom: "",
-    prenom: "",
-    email: "",
-    telephone: "",
-    date: "",
-    heure: "",
-    personnes: "",
-    commentaires: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   nom: "",
+  //   prenom: "",
+  //   email: "",
+  //   telephone: "",
+  //   date: "",
+  //   heure: "",
+  //   personnes: "",
+  //   commentaires: "",
+  // });
 
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({ ...prev, [name]: value }));
+  //   setErrors((prev) => ({ ...prev, [name]: "" }));
+  // };
 
-  const validate = () => {
-    const newErrors = {};
-    if (!formData.nom.trim()) newErrors.nom = "Nom requis";
-    if (!formData.prenom.trim()) newErrors.prenom = "Prénom requis";
-    if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Email invalide";
-    if (!/^[0-9]{10}$/.test(formData.telephone)) newErrors.telephone = "Téléphone invalide";
-    if (!formData.date) newErrors.date = "Date requise";
-    if (!formData.heure) newErrors.heure = "Heure requise";
-    if (!formData.personnes || parseInt(formData.personnes) < 1) newErrors.personnes = "Nombre de personnes requis";
-    return newErrors;
-  };
+  // const validate = () => {
+  //   const newErrors = {};
+  //   if (!formData.nom.trim()) newErrors.nom = "Nom requis";
+  //   if (!formData.prenom.trim()) newErrors.prenom = "Prénom requis";
+  //   if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Email invalide";
+  //   if (!/^[0-9]{10}$/.test(formData.telephone)) newErrors.telephone = "Téléphone invalide";
+  //   if (!formData.date) newErrors.date = "Date requise";
+  //   if (!formData.heure) newErrors.heure = "Heure requise";
+  //   if (!formData.personnes || parseInt(formData.personnes) < 1) newErrors.personnes = "Nombre de personnes requis";
+  //   return newErrors;
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = validate();
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-    e.target.submit(); // envoi vers Formspree
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const newErrors = validate();
+  //   if (Object.keys(newErrors).length > 0) {
+  //     setErrors(newErrors);
+  //     return;
+  //   }
+  //   e.target.submit(); // envoi vers Formspree
+  // };
 
   return (
     <div>
@@ -55,7 +69,7 @@ function Reservation() {
           <h1 className="banner-title">Réservation</h1>
         </Banner>
 
-        <section className="reservation-section">
+        {/* <section className="reservation-section">
           <h2 className="reservation-title">Demande de réservation</h2>
 
           <form
@@ -162,9 +176,9 @@ function Reservation() {
               Soumettre la demande
             </button>
           </form>
-        </section>
+        </section> */}
 
-        <Galerie />
+        <Galerie images={resaImages} />
       </main>
       <Footer />
     </div>

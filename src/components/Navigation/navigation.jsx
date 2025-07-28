@@ -15,10 +15,13 @@ function NavigationCards() {
         
       </div>
       <div className="nav-card">
-        <img src={imgReservation} alt="Réservation" className="nav-img" />
-        <div className="nav-overlay">
-          <span className="nav-text">RÉSERVATION</span>
-        </div>
+        <Link to="/reservation">
+          <img src={imgReservation} alt="Réservation" className="nav-img" />
+          <div className="nav-overlay">
+            <span className="nav-text">RÉSERVATION</span>
+          </div>
+        </Link>
+        
       </div>
     </div>
   );

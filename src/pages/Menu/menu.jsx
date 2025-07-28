@@ -4,6 +4,30 @@ import bannerMenu from "../../assets/menu.jpg";
 import Footer from "../../layout/Footer/footer";
 import Galerie from "../../components/Galerie/galerie";
 
+import photo1 from "../../assets/galerie/photo1.jpg";
+import photo2 from "../../assets/galerie/photo2.jpg";
+import photo3 from "../../assets/galerie/photo3.jpg";
+import photo4 from "../../assets/galerie/photo4.jpg";
+import photo5 from "../../assets/galerie/photo5.jpg";
+import photo6 from "../../assets/galerie/photo6.jpg";
+import photo7 from "../../assets/galerie/photo7.jpg";
+import photo8 from "../../assets/galerie/photo8.jpg";
+import photo9 from "../../assets/galerie/photo9.jpg";
+import photo10 from "../../assets/galerie/photo10.jpg";
+import photo11 from "../../assets/galerie/photo11.jpg";
+import photo12 from "../../assets/galerie/photo12.jpg";
+import photo13 from "../../assets/galerie/photo13.jpg";
+import photo14 from "../../assets/galerie/photo14.jpg";
+import photo15 from "../../assets/galerie/photo15.jpg";
+import photo16 from "../../assets/galerie/photo16.jpg";
+
+const homeImages = [
+  photo1, photo2, photo3, photo4, photo5,
+  photo6, photo7, photo8, photo9, photo10, 
+  photo11, photo12, photo13, photo14, photo15, 
+  photo16
+];
+
 function Menu() {
   return (
     <div className="">
@@ -412,7 +436,7 @@ function Menu() {
           </div>
 
         </section>
-        <Galerie />
+        <Galerie images={homeImages} />
       </main>
 
       <Footer />

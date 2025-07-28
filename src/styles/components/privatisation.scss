@@ -3,36 +3,33 @@
   justify-content: center;
   align-items: stretch;
   width: 100%;
-//   max-width: 1280px;
   margin: 100px auto;
-  flex-wrap: wrap; // pour mobile
+  flex-wrap: wrap;
 }
 
 /* Bloc texte uniquement avec fond */
 .privatisation-text {
   flex: 1;
-  background-color: #D6910D;
+  background-color: #844800;
   color: white;
   padding: 60px 55px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 320px;
-
-
 }
 
 .privatisation-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .privatisation-p {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 /* Bloc image sans fond */
@@ -47,3 +44,345 @@
     display: block;
   }
 }
+
+/* Bouton pour ouvrir la modale */
+.open-form-btn {
+  background-color: #ffffff;
+  color: #D6910D;
+  border: 2px solid #ffffff;
+  padding: 12px 20px;
+  margin-top: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: start;
+
+  &:hover {
+    background-color: #fff3d0;
+    color: #a16800;
+    border-color: #fff3d0;
+  }
+}
+
+/* Overlay sombre sur tout l'écran */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Contenu de la modale */
+.modal-content {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  color: #3a2b1c;
+  position: relative;
+
+  h3 {
+    color: #D6910D;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  .submit-btn {
+    background-color: #D6910D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #a16800;
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
+.error {
+  color: #f80a0a;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+
+// .privatisation-section {
+//   display: flex;
+//   justify-content: center;
+//   align-items: stretch;
+//   width: 100%;
+//   margin: 100px auto;
+//   flex-wrap: wrap;
+
+//   .privatisation-text {
+//     flex: 1;
+//     background-color: #D6910D;
+//     color: white;
+//     padding: 60px 55px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     min-width: 320px;
+
+//     .privatisation-h2 {
+//       font-size: 32px;
+//       margin-bottom: 20px;
+//       text-transform: uppercase;
+//       color: white;
+//       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//     }
+
+//     .privatisation-p {
+//       font-size: 18px;
+//       line-height: 1.6;
+//       margin-bottom: 30px;
+//     }
+
+//     .privatisation-form {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 15px;
+
+//       .form-group {
+//         display: flex;
+//         flex-direction: column;
+
+//         input,
+//         textarea {
+//           padding: 12px;
+//           border: none;
+//           border-radius: 5px;
+//           font-size: 16px;
+//         }
+
+//         textarea {
+//           min-height: 100px;
+//           resize: vertical;
+//         }
+
+//         .error {
+//           color: #ffcccc;
+//           font-size: 14px;
+//           margin-top: 5px;
+//         }
+//       }
+
+//       .submit-button {
+//         background-color: #fff;
+//         color: #D6910D;
+//         border: none;
+//         padding: 12px 20px;
+//         font-size: 16px;
+//         cursor: pointer;
+//         border-radius: 5px;
+//         transition: background-color 0.3s;
+
+//         &:hover {
+//           background-color: #ffe5b4;
+//         }
+//       }
+//     }
+//   }
+
+//   .privatisation-image {
+//     flex: 1;
+//     min-width: 320px;
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       max-height: 700px;
+//       object-fit: cover;
+//       display: block;
+//     }
+//   }
+// }
+
+
+// // .privatisation-section {
+// //   display: flex;
+// //   justify-content: center;
+// //   align-items: stretch;
+// //   width: 100%;
+// //   margin: 100px auto;
+// //   flex-wrap: wrap;
+// // }
+
+// // /* Bloc texte uniquement avec fond */
+// // .privatisation-text {
+// //   flex: 1;
+// //   background-color: #D6910D;
+// //   color: white;
+// //   padding: 60px 55px;
+// //   display: flex;
+// //   flex-direction: column;
+// //   justify-content: center;
+// //   min-width: 320px;
+// // }
+
+// // .privatisation-h2 {
+// //   font-size: 32px;
+// //   margin-bottom: 20px;
+// //   text-transform: uppercase;
+// //   color: white;
+// //   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+// // }
+
+// // .privatisation-p {
+// //   font-size: 18px;
+// //   line-height: 1.6;
+// // }
+
+// // /* Bloc image sans fond */
+// // .privatisation-image {
+// //   flex: 1;
+// //   min-width: 320px;
+
+// //   img {
+// //     width: 100%;
+// //     height: 600px;
+// //     object-fit: cover;
+// //     display: block;
+// //   }
+// // }
+
+// // /* Bouton pour ouvrir la modale */
+// // .open-form-btn {
+// //   background-color: #ffffff;
+// //   color: #D6910D;
+// //   border: 2px solid #ffffff;
+// //   padding: 12px 20px;
+// //   margin-top: 40px;
+// //   font-weight: bold;
+// //   text-transform: uppercase;
+// //   border-radius: 5px;
+// //   font-size: 16px;
+// //   cursor: pointer;
+// //   align-self: start;
+
+// //   &:hover {
+// //     background-color: #fff3d0;
+// //     color: #a16800;
+// //     border-color: #fff3d0;
+// //   }
+// // }
+
+// // /* Overlay sombre sur tout l'écran */
+// // .modal-overlay {
+// //   position: fixed;
+// //   top: 0;
+// //   left: 0;
+// //   width: 100vw;
+// //   height: 100vh;
+// //   background-color: rgba(0, 0, 0, 0.5);
+// //   display: flex;
+// //   align-items: center;
+// //   justify-content: center;
+// //   z-index: 9999;
+// // }
+
+// // /* Contenu de la modale */
+// // .modal-content {
+// //   background: #ffffff;
+// //   padding: 30px 40px;
+// //   border-radius: 10px;
+// //   width: 90%;
+// //   max-width: 500px;
+// //   color: #3a2b1c;
+// //   position: relative;
+
+// //   h3 {
+// //     color: #D6910D;
+// //     margin-bottom: 20px;
+// //     font-size: 24px;
+// //   }
+
+// //   input,
+// //   textarea {
+// //     width: 100%;
+// //     padding: 10px;
+// //     margin-bottom: 15px;
+// //     border: 1px solid #ddd;
+// //     border-radius: 5px;
+// //     font-family: inherit;
+// //     font-size: 16px;
+// //   }
+
+// //   textarea {
+// //     resize: vertical;
+// //   }
+
+// //   .submit-btn {
+// //     background-color: #D6910D;
+// //     color: white;
+// //     padding: 10px 20px;
+// //     border: none;
+// //     font-weight: bold;
+// //     border-radius: 5px;
+// //     cursor: pointer;
+// //     transition: background-color 0.3s;
+
+// //     &:hover {
+// //       background-color: #a16800;
+// //     }
+// //   }
+
+// //   .close-btn {
+// //     position: absolute;
+// //     top: 15px;
+// //     right: 15px;
+// //     background: none;
+// //     border: none;
+// //     font-size: 24px;
+// //     color: #aaa;
+// //     cursor: pointer;
+
+// //     &:hover {
+// //       color: #333;
+// //     }
+// //   }
+// // }

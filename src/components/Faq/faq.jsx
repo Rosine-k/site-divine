@@ -6,37 +6,49 @@ import FaqImg from "../../assets/faq3.jpg";
 
 const faqData = [
   {
-    question: "Est-ce que je dois réserver à l’avance ?",
-    answer: "Ce n’est pas obligatoire mais fortement conseillé, surtout le week-end.",
+    question: "Est-ce que je peux apporter un gâteau d’anniversaire au restaurant ?",
+    answer: "Oui, il est possible d’apporter votre propre gâteau d’anniversaire. Une participation de 20 € vous sera demandée pour les frais de service (mise à disposition d’assiettes, couverts, rangement, etc.).",
   },
   {
-    question: "Quels sont les horaires d’ouverture ?",
-    answer: "Nous sommes ouverts tous les jours de 18h à 01h en semaine, jusqu’à 01h30 le week-end.",
+    question: "Est-ce que les retards sont acceptés ?",
+    answer: "Oui, les retards sont acceptés dans la limite de 15 minutes. Au-delà, votre table pourra être réattribuée.",
   },
   {
-    question: "Acceptez-vous les paiements par carte ?",
-    answer: "Oui, nous acceptons les paiements par carte bancaire et en espèces.",
+    question: "Est-ce que tout le groupe doit être présent pour être installé ?",
+    answer: "Pour garantir une bonne organisation du service, nous ne pouvons pas vous faire entrer si tout le groupe n’est pas au complet.",
   },
   {
-    question: "Proposez-vous des options végétariennes ?",
-    answer: "Oui, notre carte contient plusieurs options végétariennes faites maison.",
+    question: "Est-ce qu’il y a de la musique dans le restaurant ?",
+    answer: "Oui, il y a de la musique d’ambiance pour accompagner votre repas.",
   },
   {
-    question: "Peut-on privatiser le restaurant ?",
-    answer: "Oui, sauf les vendredis et samedis. Contactez-nous pour plus de détails.",
+    question: "Jusqu’à quelle heure la cuisine est-elle ouverte ?",
+    answer: "La cuisine ferme à minuit la semaine et 1h du matin le weekend.",
   },
   {
-    question: "Y a-t-il un menu enfant ?",
-    answer: "Nous n’avons pas de menu enfant fixe, mais nous pouvons adapter les plats.",
+    question: "Comment puis-je réserver une table chez Divine ?",
+    answer: "Les réservations se font facilement via notre site internet. Pour toute demande de groupe (plus de 15 personnes), merci de nous contacter directement par téléphone.",
   },
   {
-    question: "Puis-je venir avec mon animal de compagnie ?",
-    answer: "Les petits chiens sont acceptés en laisse, à condition qu’ils restent calmes.",
+    question: "Est-il possible de privatiser ou de venir en groupe ?",
+    answer: "Oui, nous acceptons les réservations de groupe et la privatisation partielle sous certaines conditions : Vous pouvez privatiser pour un groupe jusqu’à 26 personnes maximum. Une terrasse fermée est disponible pour les groupes du lundi au jeudi. Le week-end, nous n’acceptons pas les groupes de plus de 12 personnes après 20h. Pour toute demande spécifique ou privatisation, merci de nous contacter par téléphone.",
   },
   {
-    question: "Faites-vous des plats à emporter ?",
-    answer: "Oui, vous pouvez commander sur place ou nous appeler directement.",
-  }
+    question: "Quel est le nombre maximum de personnes autorisé le week-end ?",
+    answer: "Le week-end, nous accueillons les groupes dans les limites suivantes :  jusqu’à 15 personnes avant 20h - maximum 12 personnes après 20h.",
+  },
+  {
+    question: "Est-ce que la viande servie est halal ?",
+    answer: "Oui, toute la viande que nous servons est 100 % halal.",
+  },
+  {
+    question: "Est-ce qu’il y a un DJ chez Divine ?",
+    answer: "Non, il n’y a pas de DJ chez Divine. Nous diffusons une musique d’ambiance soigneusement sélectionnée pour accompagner votre repas dans une atmosphère chaleureuse et conviviale.",
+  },
+  {
+    question: "Proposez-vous des formules ou menus ?",
+    answer: "Oui, nous proposons deux formules au choix : – Entrée + Plat + Boisson – Plat + Dessert + Boisson. Ces formules sont proposées à 35 € ou 45 €, selon le menu sélectionné. Le détail des plats inclus est à retrouver dans notre carte, rubrique Menu.",
+  },
 ];
 
 export default function FaqCarousel() {
@@ -57,7 +69,7 @@ export default function FaqCarousel() {
         {faqData.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="faq-card">
-              {/* ✅ Image de fond avec faible opacité */}
+              
               <img src={FaqImg} alt="fond carte" className="faq-bg-img" />
               
               <h3 className="faq-question">{item.question}</h3>
