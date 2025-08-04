@@ -92,7 +92,8 @@
       font-size: 16px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: 0.3s ease;      
+      transition: 0.3s ease;   
+      border-radius: 5px;   
 
       &:hover {
         background: #844800;

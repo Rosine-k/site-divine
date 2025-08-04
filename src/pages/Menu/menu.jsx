@@ -3,6 +3,7 @@ import Banner from "../../components/Banner/banner";
 import bannerMenu from "../../assets/menu.jpg";
 import Footer from "../../layout/Footer/footer";
 import Galerie from "../../components/Galerie/galerie";
+import { Link } from 'react-router-dom';
 
 import photo1 from "../../assets/galerie/photo1.jpg";
 import photo2 from "../../assets/galerie/photo2.jpg";
@@ -432,7 +433,7 @@ function Menu() {
             
           </div>
           <div className="menu-cta">
-            <button className="cta-button">RÉSERVEZ UNE TABLE</button>
+            <Link to="/reservation" className="cta-button">RÉSERVEZ UNE TABLE </Link>
           </div>
 
         </section>

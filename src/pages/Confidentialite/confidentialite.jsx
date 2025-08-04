@@ -14,7 +14,6 @@ export default function Confidentialite() {
             <p>
               Le site <strong>divine.fr</strong> est édité par le restaurant DIVINE,
               situé au 12 rue du Surmelin, 75020 Paris.
-              Le responsable du traitement est Mr [Nom à compléter].
             </p>
           </section>
 

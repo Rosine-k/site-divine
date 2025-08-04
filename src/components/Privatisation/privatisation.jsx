@@ -1,8 +1,6 @@
-
-import privatisationImg from '../../assets/privatisation.jpg';
+import videoP from '../../video/video.mp4';
 
 export default function Privatisation() {
-
   return (
     <section className="privatisation-section">
       <div className="privatisation-text">
@@ -12,15 +10,20 @@ export default function Privatisation() {
           spécial — anniversaire, EVJF, soirée professionnelle ou autre ? 
           Chez Divine, c’est tout à fait possible !<br /><br />
           Notez cependant que les privatisations ne sont pas disponibles <strong>les vendredis et samedis.</strong><br /><br />
-                  
           N’hésitez pas à nous contacter dès maintenant pour organiser votre moment unique.
         </p>       
       </div>
 
       <div className="privatisation-image">
-        <img src={privatisationImg} alt="Privatisation" />
+        <video 
+          src={videoP}
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          className="privatisation-video"
+        ></video>
       </div>
-
     </section>
   );
 }
